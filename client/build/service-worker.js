@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/precache-manifest.fc265248756bd11a0296b744e1658563.js"
+  "/precache-manifest.61ca7f245547aaf8e1c3b590a9a02e27.js"
 );
 
 self.addEventListener('message', (event) => {
@@ -22,6 +22,7 @@ self.addEventListener('message', (event) => {
     self.skipWaiting();
   }
 });
+
 self.addEventListener('push', e => {
     const data = e.data.json();
     console.log('Push notification has been received!');
