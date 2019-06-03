@@ -15,17 +15,15 @@ const privateKey = 'VuyyzuEQx25XXYiol6pkFuVObcKgT1nMbE0Kvoo_W00';
 
 webPush.setVapidDetails('mailto:masterbahbidi@gmail.com', publicKey, privateKey);
 //production mode
-if(process.env.NODE_ENV === 'production' || true) {  
+if(process.env.NODE_ENV === 'production') {  
     app.get('*', (req, res) => {    
         res.sendFile(path.join(__dirname +'/client/public/index.html'));  
     });
 }
 else{
     //build mode
-    //app.get('*', (req, res) => {  res.sendFile(path.join(__dirname+'/client/public/index.html'));});
+    app.get('*', (req, res) => {  res.sendFile(path.join(__dirname+'/client/public/index.html'));});
 }
-
-
 
 
 //allow cross origin
@@ -90,9 +88,9 @@ app.post('/push',(request, response) => {
 
 });
 
-
+var port = process.env.PORT || 8085;
   //start server
-app.listen('8085', function () {
-    console.log("Express server listening on port 8085");
+app.listen(port, function () {
+    console.log("Express server listening on port " + port);
 });
 exports = module.exports = app;
