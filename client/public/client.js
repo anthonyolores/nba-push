@@ -33,20 +33,7 @@ function send2(){
                     userVisibleOnly: true,
                     applicationServerKey: urlBase64ToUint8Array(publicKey)
                 }).then(function(subscription){
-                    console.log("Subscribed!!!!!!");
-                    // fetch('/push', {
-                    //     method: 'POST',
-                    //     body: JSON.stringify(
-                    //         {
-                    //             subscription:subscription,
-                    //             title: "default client title",
-                    //             message: "default client message"
-                    //         }),
-                    //     headers: {
-                    //         'content-type': 'application/json'
-                    //     }
-                    // });
-
+                    console.log("Subscribed!");
                     document.addEventListener("pushbaby", function(e) {
                         fetch('/push', {
                             method: 'POST',
