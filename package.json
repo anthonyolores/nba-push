@@ -3,10 +3,10 @@
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
-  "scripts": {    
-      "start": "node server.js",    
-      "server": "nodemon server.js"
-    },
+  "scripts": {
+    "start": "node server.js",
+    "server": "nodemon server.js"
+  },
   "author": "",
   "license": "ISC",
   "dependencies": {
@@ -17,4 +17,3 @@
     "web-push": "^3.3.1"
   }
 }
-
